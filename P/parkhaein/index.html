@@ -193,7 +193,7 @@ const covers=['taste-cover.png','wemuse-cover.png','ccomo-cover.png','tobacco-co
 const visual=i=>`<div class="project-visual project-color-${i}"><img src="img/${covers[i]}" alt="${data[i][0]} 대표 이미지" loading="lazy"></div>`;
 function projectPage(target,chapter,title,description,mainIndex,related,keywords){
   const main=data[mainIndex];
-  const headline=title==='MARKETING'?'사람의 경험을 <strong>마케팅으로</strong><br>설계한 프로젝트':'일상 속 이야기를 <strong>콘텐츠로</strong><br>풀어낸 프로젝트';
+  const headline=title==='MARKETING'?'<strong>마케팅</strong> 프로젝트':'<strong>콘텐츠</strong> 프로젝트';
   document.querySelector(target).innerHTML=`<header class="category-heading"><span>PROJECT · ${chapter}</span><h2>${headline}</h2><p>${description}</p></header><div class="category-divider"></div><article class="category-primary"><p class="category-name">${title} PROJECT</p><a href="project.html?id=${mainIndex+1}">${visual(mainIndex)}</a><div class="primary-copy"><a href="project.html?id=${mainIndex+1}"><h3>${main[0]} <span>↗</span></h3></a><p>${main[2]}<br>${main[3]}</p><small>${keywords}</small></div></article><aside class="related-projects"><p>RELATED PROJECTS</p><div>${related.map(i=>`<a href="project.html?id=${i+1}"><span>${data[i][0]}</span><b>↗</b><small>${data[i][1]}</small></a>`).join('')}</div></aside>`;
 }
 projectPage('#marketing-projects','01','MARKETING','현장 경험과 채널 운영을 설계한 프로젝트',1,[2,3],'OFFLINE · EXPERIENCE · BRAND');
