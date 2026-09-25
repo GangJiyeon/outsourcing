@@ -171,6 +171,14 @@
   .category-primary{width:100%;padding:0;border:0}.category-name{text-align:left}
   .related-projects{padding:0;margin-top:26px}
 }
+/* Mobile: keep the About headline visible before the lower profile details. */
+@media(max-width:760px){
+  .about.reference-about{gap:22px;overflow:hidden}
+  .about.reference-about>div.reference-person{height:330px;min-height:0;overflow:visible}
+  .reference-about .reference-person h2{position:relative;z-index:1;width:100%;flex:0 0 auto;font-size:clamp(25px,7.6vw,34px);line-height:1.38;letter-spacing:-.055em}
+  .reference-photo{margin-top:12px;min-height:0}
+  .reference-copy{padding-bottom:0}
+}
 </style></head><body>
 <nav class="rail" aria-label="주요 메뉴"><a href="#home"><span>HOME</span></a><a href="#about"><span>ABOUT</span></a><a href="#projects"><span>PROJECT</span></a><a href="#contact"><span>CONTACT</span></a></nav>
 <section class="cover cover-home" id="home" aria-label="포트폴리오 표지">
